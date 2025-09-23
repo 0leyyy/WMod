@@ -1,17 +1,38 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Balls",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "balls",
+      "metadata": {
+        "files": [
+          "src/main/resources/assets/w_mod/models/item/balls.json",
+          "src/main/java/net/mcreator/wmod/item/BallsItem.java"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
-  "tag_elements": {},
+  "tag_elements": {
+    "ITEMS:minecraft:meat": [
+      "~CUSTOM:Balls"
+    ]
+  },
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.w_mod.balls": "Balls"
+    }
   },
   "metadata": {
     "files": [
       "src/main/java/net/mcreator/wmod/WModMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/resources/pack.mcmeta"
+      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/wmod/init/WModModItems.java"
     ]
   },
   "foldersRoot": {
