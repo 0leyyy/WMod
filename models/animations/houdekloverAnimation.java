@@ -49,4 +49,31 @@ public class houdekloverAnimation {
 							new Keyframe(4.0F, KeyframeAnimations.posVec(-1.0F, 0.0F, 0.0F),
 									AnimationChannel.Interpolations.LINEAR)))
 			.build();
+
+	public static final AnimationDefinition jump = AnimationDefinition.Builder.withLength(2.0F)
+			.addAnimation("bone",
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.25F, KeyframeAnimations.posVec(0.0F, -0.33F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.75F, KeyframeAnimations.posVec(0.0F, 5.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(1.0833F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("bone2",
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.25F, KeyframeAnimations.posVec(0.0F, -0.33F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.75F, KeyframeAnimations.posVec(0.0F, 5.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(1.0833F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.addAnimation("bone11",
+					new AnimationChannel(AnimationChannel.Targets.POSITION,
+							new Keyframe(0.25F, KeyframeAnimations.posVec(0.0F, -1.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(0.75F, KeyframeAnimations.posVec(0.0F, 5.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR),
+							new Keyframe(1.0833F, KeyframeAnimations.posVec(0.0F, 0.0F, 0.0F),
+									AnimationChannel.Interpolations.LINEAR)))
+			.build();
 }
