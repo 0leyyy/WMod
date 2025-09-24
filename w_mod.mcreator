@@ -1,17 +1,34 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "Gars",
+      "type": "item",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "gars",
+      "metadata": {
+        "files": [
+          "src/main/java/net/mcreator/wmod/item/GarsItem.java",
+          "src/main/resources/assets/w_mod/models/item/gars.json"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
-    "en_us": {}
+    "en_us": {
+      "item.w_mod.gars": "Gars"
+    }
   },
   "metadata": {
     "files": [
       "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/wmod/WModMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml"
+      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/java/net/mcreator/wmod/init/WModModItems.java"
     ]
   },
   "foldersRoot": {
