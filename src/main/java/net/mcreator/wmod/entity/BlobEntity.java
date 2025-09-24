@@ -51,6 +51,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.core.Holder;
 import net.minecraft.core.BlockPos;
 
+import net.mcreator.wmod.procedures.BlobPlaybackConditionProcedure;
 import net.mcreator.wmod.init.WModModEntities;
 import net.mcreator.wmod.WModMod;
 
@@ -60,6 +61,7 @@ import java.util.function.BiConsumer;
 
 public class BlobEntity extends TamableAnimal implements VibrationSystem {
 	public final AnimationState animationState0 = new AnimationState();
+	public final AnimationState animationState2 = new AnimationState();
 	private final DynamicGameEventListener<VibrationSystem.Listener> dynamicGameEventListener = new DynamicGameEventListener(new VibrationSystem.Listener(this));
 	private final VibrationSystem.User vibrationUser = new VibrationUser();
 	private VibrationSystem.Data vibrationData = new VibrationSystem.Data();
@@ -190,6 +192,7 @@ public class BlobEntity extends TamableAnimal implements VibrationSystem {
 		}
 		if (this.level().isClientSide()) {
 			this.animationState0.animateWhen(true, this.tickCount);
+			this.animationState2.animateWhen(BlobPlaybackConditionProcedure.execute(), this.tickCount);
 		}
 	}
 
@@ -249,6 +252,7 @@ public class BlobEntity extends TamableAnimal implements VibrationSystem {
 
 		@Override
 		public void onReceiveVibration(ServerLevel world, BlockPos vibrationPos, Holder<GameEvent> holder, @Nullable Entity vibrationSource, @Nullable Entity projectileShooter, float distance) {
+			BlobPlaybackConditionProcedure.execute();
 		}
 	}
 }

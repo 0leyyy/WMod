@@ -40,6 +40,7 @@ public class BlobRenderer extends MobRenderer<BlobEntity, Modelhoudeklover<BlobE
 				this.root().getAllParts().forEach(ModelPart::resetPose);
 				this.animate(entity.animationState0, houdekloverAnimation.idle, ageInTicks, 1f);
 				this.animateWalk(houdekloverAnimation.walking, limbSwing, limbSwingAmount, 1f, 1f);
+				this.animate(entity.animationState2, houdekloverAnimation.jump, ageInTicks, 1f);
 			}
 		};
 

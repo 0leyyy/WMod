@@ -38,6 +38,17 @@
         "speed": 1.0,
         "walking": true,
         "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:houdekloverAnimation.jump"
+        },
+        "speed": 1.0,
+        "condition": {
+          "name": "BlobPlaybackCondition"
+        },
+        "walking": false,
+        "amplitude": 1.0
       }
     ],
     "modelWidth": 0.6,
@@ -185,6 +196,9 @@
     ],
     "vibrationSensitivityRadius": {
       "fixedValue": 12.0
+    },
+    "onReceivedVibration": {
+      "name": "BlobPlaybackCondition"
     }
   }
 }
