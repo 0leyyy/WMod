@@ -1,3 +1,5 @@
 {
-  "item.w_mod.gars": "Gars"
+  "item.w_mod.gars": "Gars",
+  "item.w_mod.blob_spawn_egg": "Blob Spawn Egg",
+  "entity.w_mod.blob": "Blob"
 }

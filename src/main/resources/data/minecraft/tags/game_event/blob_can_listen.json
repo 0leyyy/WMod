@@ -1,0 +1,8 @@
+{
+  "replace": false,
+  "values": [
+    "explode",
+    "instrument_play",
+    "jukebox_play"
+  ]
+}
