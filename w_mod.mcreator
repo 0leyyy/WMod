@@ -9,8 +9,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/wmod/entity/BlobEntity.java",
-          "src/main/java/net/mcreator/wmod/client/renderer/BlobRenderer.java",
           "src/main/resources/data/w_mod/neoforge/biome_modifier/blob_biome_modifier.json",
+          "src/main/java/net/mcreator/wmod/client/renderer/BlobRenderer.java",
           "src/main/resources/assets/w_mod/models/item/blob_spawn_egg.json"
         ]
       }
@@ -35,14 +35,14 @@
   },
   "metadata": {
     "files": [
-      "src/main/java/net/mcreator/wmod/WModMod.java",
-      "src/main/resources/META-INF/neoforge.mods.toml",
+      "src/main/resources/pack.mcmeta",
       "src/main/java/net/mcreator/wmod/init/WModModTabs.java",
       "src/main/java/net/mcreator/wmod/init/WModModModels.java",
-      "src/main/resources/pack.mcmeta",
+      "src/main/java/net/mcreator/wmod/WModMod.java",
+      "src/main/resources/META-INF/neoforge.mods.toml",
       "src/main/java/net/mcreator/wmod/init/WModModItems.java",
-      "src/main/java/net/mcreator/wmod/init/WModModEntityRenderers.java",
-      "src/main/java/net/mcreator/wmod/init/WModModEntities.java"
+      "src/main/java/net/mcreator/wmod/init/WModModEntities.java",
+      "src/main/java/net/mcreator/wmod/init/WModModEntityRenderers.java"
     ]
   },
   "foldersRoot": {
