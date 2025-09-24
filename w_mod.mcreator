@@ -9,8 +9,8 @@
       "metadata": {
         "files": [
           "src/main/java/net/mcreator/wmod/entity/BlobEntity.java",
-          "src/main/java/net/mcreator/wmod/client/renderer/BlobRenderer.java",
           "src/main/resources/data/w_mod/neoforge/biome_modifier/blob_biome_modifier.json",
+          "src/main/java/net/mcreator/wmod/client/renderer/BlobRenderer.java",
           "src/main/resources/assets/w_mod/models/item/blob_spawn_egg.json"
         ]
       }

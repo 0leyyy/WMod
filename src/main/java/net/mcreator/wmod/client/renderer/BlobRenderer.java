@@ -10,9 +10,16 @@ import net.mcreator.wmod.entity.BlobEntity;
 import net.mcreator.wmod.client.model.animations.houdekloverAnimation;
 import net.mcreator.wmod.client.model.Modelhoudeklover;
 
+import com.mojang.blaze3d.vertex.PoseStack;
+
 public class BlobRenderer extends MobRenderer<BlobEntity, Modelhoudeklover<BlobEntity>> {
 	public BlobRenderer(EntityRendererProvider.Context context) {
 		super(context, new AnimatedModel(context.bakeLayer(Modelhoudeklover.LAYER_LOCATION)), 0.5f);
+	}
+
+	@Override
+	protected void scale(BlobEntity entity, PoseStack poseStack, float f) {
+		poseStack.scale(entity.getAgeScale(), entity.getAgeScale(), entity.getAgeScale());
 	}
 
 	@Override
