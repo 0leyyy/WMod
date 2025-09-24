@@ -3,7 +3,7 @@
     {
       "name": "R",
       "type": "plant",
-      "compiles": false,
+      "compiles": true,
       "locked_code": false,
       "registry_name": "r",
       "metadata": {
@@ -31,10 +31,7 @@
     "files": [
       "src/main/java/net/mcreator/wmod/WModMod.java",
       "src/main/resources/META-INF/neoforge.mods.toml",
-      "src/main/java/net/mcreator/wmod/init/WModModTabs.java",
-      "src/main/resources/pack.mcmeta",
-      "src/main/java/net/mcreator/wmod/init/WModModBlocks.java",
-      "src/main/java/net/mcreator/wmod/init/WModModItems.java"
+      "src/main/resources/pack.mcmeta"
     ]
   },
   "foldersRoot": {
