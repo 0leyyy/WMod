@@ -11,11 +11,13 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.BlockItem;
 
+import net.mcreator.wmod.item.WDFVItem;
 import net.mcreator.wmod.WModMod;
 
 public class WModModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(WModMod.MODID);
 	public static final DeferredItem<Item> R = block(WModModBlocks.R);
+	public static final DeferredItem<Item> WDFV = REGISTRY.register("wdfv", WDFVItem::new);
 
 	// Start of user code block custom items
 	// End of user code block custom items
