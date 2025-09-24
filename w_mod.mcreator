@@ -1,12 +1,30 @@
 {
-  "mod_elements": [],
+  "mod_elements": [
+    {
+      "name": "R",
+      "type": "plant",
+      "compiles": true,
+      "locked_code": false,
+      "registry_name": "r",
+      "metadata": {
+        "files": [
+          "src/main/resources/data/w_mod/loot_table/blocks/r.json",
+          "src/main/resources/assets/w_mod/models/block/r.json",
+          "src/main/java/net/mcreator/wmod/block/RBlock.java",
+          "src/main/resources/assets/w_mod/models/item/r.json",
+          "src/main/resources/assets/w_mod/blockstates/r.json"
+        ]
+      }
+    }
+  ],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
   "tab_element_order": {},
   "language_map": {
     "en_us": {
-      "item.w_mod.gars": "Gars"
+      "item.w_mod.gars": "Gars",
+      "block.w_mod.r": "R"
     }
   },
   "metadata": {
