@@ -1,19 +1,5 @@
 {
-  "mod_elements": [
-    {
-      "name": "Gars",
-      "type": "item",
-      "compiles": true,
-      "locked_code": false,
-      "registry_name": "gars",
-      "metadata": {
-        "files": [
-          "src/main/java/net/mcreator/wmod/item/GarsItem.java",
-          "src/main/resources/assets/w_mod/models/item/gars.json"
-        ]
-      }
-    }
-  ],
+  "mod_elements": [],
   "variable_elements": [],
   "sound_elements": [],
   "tag_elements": {},
