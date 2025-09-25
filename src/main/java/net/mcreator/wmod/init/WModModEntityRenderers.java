@@ -8,12 +8,12 @@ import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.api.distmarker.Dist;
 
-import net.mcreator.wmod.client.renderer.BlobRenderer;
+import net.mcreator.wmod.client.renderer.BobsRenderer;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD, value = Dist.CLIENT)
 public class WModModEntityRenderers {
 	@SubscribeEvent
 	public static void registerEntityRenderers(EntityRenderersEvent.RegisterRenderers event) {
-		event.registerEntityRenderer(WModModEntities.BLOB.get(), BlobRenderer::new);
+		event.registerEntityRenderer(WModModEntities.BOBS.get(), BobsRenderer::new);
 	}
 }

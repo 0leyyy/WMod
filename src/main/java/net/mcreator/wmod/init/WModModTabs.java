@@ -21,7 +21,7 @@ public class WModModTabs {
 	@SubscribeEvent
 	public static void buildTabContentsVanilla(BuildCreativeModeTabContentsEvent tabData) {
 		if (tabData.getTabKey() == CreativeModeTabs.SPAWN_EGGS) {
-			tabData.accept(WModModItems.BLOB_SPAWN_EGG.get());
+			tabData.accept(WModModItems.BOBS_SPAWN_EGG.get());
 		}
 	}
 }

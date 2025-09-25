@@ -15,14 +15,14 @@ import net.minecraft.world.entity.EntityType;
 import net.minecraft.world.entity.Entity;
 import net.minecraft.core.registries.Registries;
 
-import net.mcreator.wmod.entity.BlobEntity;
+import net.mcreator.wmod.entity.BobsEntity;
 import net.mcreator.wmod.WModMod;
 
 @EventBusSubscriber(bus = EventBusSubscriber.Bus.MOD)
 public class WModModEntities {
 	public static final DeferredRegister<EntityType<?>> REGISTRY = DeferredRegister.create(Registries.ENTITY_TYPE, WModMod.MODID);
-	public static final DeferredHolder<EntityType<?>, EntityType<BlobEntity>> BLOB = register("blob",
-			EntityType.Builder.<BlobEntity>of(BlobEntity::new, MobCategory.MONSTER).setShouldReceiveVelocityUpdates(true).setTrackingRange(67).setUpdateInterval(3)
+	public static final DeferredHolder<EntityType<?>, EntityType<BobsEntity>> BOBS = register("bobs",
+			EntityType.Builder.<BobsEntity>of(BobsEntity::new, MobCategory.CREATURE).setShouldReceiveVelocityUpdates(true).setTrackingRange(64).setUpdateInterval(3)
 
 					.sized(0.6f, 1.8f));
 
@@ -34,11 +34,11 @@ public class WModModEntities {
 
 	@SubscribeEvent
 	public static void init(RegisterSpawnPlacementsEvent event) {
-		BlobEntity.init(event);
+		BobsEntity.init(event);
 	}
 
 	@SubscribeEvent
 	public static void registerAttributes(EntityAttributeCreationEvent event) {
-		event.put(BLOB.get(), BlobEntity.createAttributes().build());
+		event.put(BOBS.get(), BobsEntity.createAttributes().build());
 	}
 }

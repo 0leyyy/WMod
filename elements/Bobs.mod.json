@@ -2,10 +2,10 @@
   "_fv": 79,
   "_type": "livingentity",
   "definition": {
-    "mobName": "Blob",
-    "mobLabel": "lil monkey",
-    "mobModelName": "Modelhoudeklover",
-    "mobModelTexture": "houdejlovertexture.png",
+    "mobName": "Bobs",
+    "mobLabel": "",
+    "mobModelName": "ModelBobs",
+    "mobModelTexture": "bobstexture.png",
     "transparentModelCondition": {
       "fixedValue": false
     },
@@ -25,7 +25,7 @@
     "animations": [
       {
         "animation": {
-          "value": "CUSTOM:houdekloverAnimation.idle"
+          "value": "CUSTOM:BobsAnimation.idle"
         },
         "speed": 1.0,
         "walking": false,
@@ -33,7 +33,15 @@
       },
       {
         "animation": {
-          "value": "CUSTOM:houdekloverAnimation.walking"
+          "value": "CUSTOM:BobsAnimation.dance"
+        },
+        "speed": 1.0,
+        "walking": false,
+        "amplitude": 1.0
+      },
+      {
+        "animation": {
+          "value": "CUSTOM:BobsAnimation.Walking"
         },
         "speed": 1.0,
         "walking": true,
@@ -41,19 +49,16 @@
       },
       {
         "animation": {
-          "value": "CUSTOM:houdekloverAnimation.jump"
+          "value": "CUSTOM:BobsAnimation.Jump"
         },
         "speed": 1.0,
-        "condition": {
-          "name": "BlobPlaybackCondition"
-        },
         "walking": false,
         "amplitude": 1.0
       }
     ],
     "modelWidth": 0.6,
     "modelHeight": 1.8,
-    "modelShadowSize": 0.5,
+    "modelShadowSize": 0.1,
     "mountedYOffset": 0.0,
     "hasSpawnEgg": true,
     "spawnEggBaseColor": {
@@ -94,12 +99,12 @@
     "mobCreatureType": "UNDEFINED",
     "attackStrength": 1,
     "attackKnockback": 0.0,
-    "knockbackResistance": 0.1,
-    "movementSpeed": 0.2,
-    "stepHeight": 0.4,
-    "armorBaseValue": 0.1,
-    "trackingRange": 67,
-    "followRange": 67,
+    "knockbackResistance": 0.0,
+    "movementSpeed": 0.19999999999999998,
+    "stepHeight": 0.1,
+    "armorBaseValue": 0.0,
+    "trackingRange": 64,
+    "followRange": 22,
     "health": 3,
     "xpAmount": 0,
     "waterMob": false,
@@ -119,14 +124,14 @@
     "immuneToFire": false,
     "immuneToArrows": false,
     "immuneToFallDamage": false,
-    "immuneToCactus": true,
-    "immuneToDrowning": true,
+    "immuneToCactus": false,
+    "immuneToDrowning": false,
     "immuneToLightning": false,
     "immuneToPotions": false,
     "immuneToPlayer": false,
     "immuneToExplosion": false,
     "immuneToTrident": false,
-    "immuneToAnvil": true,
+    "immuneToAnvil": false,
     "immuneToWither": false,
     "immuneToDragonBreath": false,
     "mobDrop": {
@@ -150,14 +155,10 @@
     "entityDataEntries": [],
     "hasAI": true,
     "aiBase": "(none)",
-    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">6.7</field><field name=\"condition\">null,null</field><next><block type=\"panic_when_attacked\"><field name=\"speed\">1.2</field><field name=\"condition\">null,null</field><next><block type=\"look_around\"><field name=\"condition\">null,null</field><next><block type=\"swim_in_water\"><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">6.7</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></next></block></next></block></xml>",
-    "breedable": true,
-    "tameable": true,
-    "breedTriggerItems": [
-      {
-        "value": "Items.AMETHYST_SHARD"
-      }
-    ],
+    "aixml": "<xml xmlns=\"https://developers.google.com/blockly/xml\"><block type=\"aitasks_container\" deletable=\"false\" x=\"40\" y=\"40\"><next><block type=\"wander\"><field name=\"speed\">1</field><field name=\"condition\">null,null</field><next><block type=\"break_blocks\"><field name=\"speed\">1</field><field name=\"y_max\">3</field><field name=\"condition\">null,null</field><value name=\"block\"><block type=\"mcitem_allblocks\"><field name=\"value\">Blocks.TALLGRASS#1</field></block></value><next><block type=\"watch_closest_entity\"><field name=\"entity\">EntityPlayer</field><field name=\"radius\">12</field><field name=\"condition\">null,null</field><next><block type=\"watch_closest_entity\"><field name=\"entity\">CUSTOM:Bobs</field><field name=\"radius\">12</field><field name=\"condition\">null,null</field></block></next></block></next></block></next></block></next></block></xml>",
+    "breedable": false,
+    "tameable": false,
+    "breedTriggerItems": [],
     "ranged": false,
     "rangedAttackItem": {
       "value": ""
@@ -166,9 +167,9 @@
     "rangedAttackInterval": 20,
     "rangedAttackRadius": 10.0,
     "spawnThisMob": true,
-    "doesDespawnWhenIdle": true,
+    "doesDespawnWhenIdle": false,
     "spawningProbability": 20,
-    "mobSpawningType": "monster",
+    "mobSpawningType": "creature",
     "minNumberOfMobsPerGroup": 4,
     "maxNumberOfMobsPerGroup": 4,
     "restrictionBiomes": [],
@@ -185,20 +186,14 @@
     "sensitiveToVibration": true,
     "vibrationalEvents": [
       {
-        "value": "INSTRUMENT_PLAY"
-      },
-      {
         "value": "JUKEBOX_PLAY"
       },
       {
-        "value": "EXPLODE"
+        "value": "INSTRUMENT_PLAY"
       }
     ],
     "vibrationSensitivityRadius": {
-      "fixedValue": 12.0
-    },
-    "onReceivedVibration": {
-      "name": "BlobPlaybackCondition"
+      "fixedValue": 11.0
     }
   }
 }

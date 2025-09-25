@@ -4,7 +4,7 @@
     "type": "neoforge:any"
   },
   "spawners": {
-    "type": "w_mod:blob",
+    "type": "w_mod:bobs",
     "weight": 20,
     "minCount": 4,
     "maxCount": 4

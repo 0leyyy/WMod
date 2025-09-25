@@ -13,7 +13,7 @@ import net.mcreator.wmod.WModMod;
 
 public class WModModItems {
 	public static final DeferredRegister.Items REGISTRY = DeferredRegister.createItems(WModMod.MODID);
-	public static final DeferredItem<Item> BLOB_SPAWN_EGG = REGISTRY.register("blob_spawn_egg", () -> new DeferredSpawnEggItem(WModModEntities.BLOB, -1, -1, new Item.Properties()));
+	public static final DeferredItem<Item> BOBS_SPAWN_EGG = REGISTRY.register("bobs_spawn_egg", () -> new DeferredSpawnEggItem(WModModEntities.BOBS, -1, -1, new Item.Properties()));
 	// Start of user code block custom items
 	// End of user code block custom items
 }
